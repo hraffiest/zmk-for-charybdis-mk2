@@ -43,6 +43,7 @@
                                 &kp LEFT_ALT  &kp LCTRL  &kp RET     &lt 1 SPACE       &kp BACKSPACE
                                               &mkp MB1   &mkp MB2    &kp LS(LEFT_ALT)
             >;
+            trackball-bindings = <&tmv_coarse>;
         };
 
         layer_1 {
@@ -54,6 +55,8 @@
                                        &trans          &trans          &lang        &trans         &trans
                                                        &trans          &none        &trans
             >;
+
+            trackball-bindings = <&tsl>;
         };
 
         layer_2 {
