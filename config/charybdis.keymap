@@ -16,16 +16,12 @@
     combos { compatible = "zmk,combos"; };
 
     macros {
-        lang: lang {
+        screenshot: lang {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp RCTRL>,
-                <&macro_wait_time 100>,
-                <&kp LSHFT>,
-                <&macro_release>,
-                <&kp LSHFT &kp RCTRL>;
+                <&kp LEFT_SHIFT &kp K_FIND &kp LEFT_WIN &kp PRINTSCREEN>;
 
             label = "LANG";
         };
@@ -47,23 +43,23 @@
 
         layer_1 {
             bindings = <
-&kp EQUAL        &kp F1     &kp F2     &kp F3          &kp F4          &kp F5       &kp F6         &kp F7    &kp F8    &kp F9     &kp F10               &kp F11
-&trans           &none      &none      &none           &none           &kp TILDE    &kp PG_UP      &none     &kp UP    &kp PIPE   &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&kp PRINTSCREEN  &kp LC(A)  &kp LC(S)  &none           &kp LC(F)       &kp GRAVE    &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&trans           &none      &none      &kp RC(INSERT)  &kp RS(INSERT)  &kp INS      &none          &mkp MB1  &mkp MB2  &mkp MB3   &kp LEFT_BRACE        &kp RIGHT_BRACE
-                                       &trans          &trans          &lang        &trans         &trans
-                                                       &trans          &none        &trans
+&kp EQUAL        &kp F1     &kp F2     &kp F3          &kp F4          &kp F5         &kp F6         &kp F7    &kp F8    &kp F9     &kp F10               &kp F11
+&trans           &none      &none      &none           &none           &kp TILDE      &kp PG_UP      &none     &kp UP    &kp PIPE   &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&kp PRINTSCREEN  &kp LC(A)  &kp LC(S)  &none           &kp LC(F)       &kp GRAVE      &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&trans           &none      &none      &kp RC(INSERT)  &kp RS(INSERT)  &kp INS        &screenshot    &mkp MB1  &mkp MB2  &mkp MB3   &kp LEFT_BRACE        &kp RIGHT_BRACE
+                                       &trans          &trans          &screenshot    &trans         &trans
+                                                       &trans          &none          &trans
             >;
         };
 
         layer_2 {
             bindings = <
-&trans    &kp F11     &kp F12     &kp F13  &kp F14  &kp F15    &none     &none   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
-&kp CAPS  &none       &none       &none    &none    &none      &kp HOME  &kp N7  &kp N8        &kp N9                &kp PLUS               &kp MINUS
-&trans    &trans      &trans      &trans   &trans   &trans     &kp END   &kp N4  &kp N5        &kp N6                &kp PERIOD             &kp EQUAL
-&trans    &bt BT_CLR  &sys_reset  &trans   &trans   &trans     &kp N0    &kp N1  &kp N2        &kp N3                &kp SLASH              &kp ENTER
-                                  &trans   &trans   &none      &trans    &trans
-                                           &trans   &lang      &trans
+&trans    &kp F11     &kp F12     &kp F13  &kp F14  &kp F15        &none     &none   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
+&kp CAPS  &none       &none       &none    &none    &none          &kp HOME  &kp N7  &kp N8        &kp N9                &kp PLUS               &kp MINUS
+&trans    &trans      &trans      &trans   &trans   &trans         &kp END   &kp N4  &kp N5        &kp N6                &kp PERIOD             &kp EQUAL
+&trans    &bt BT_CLR  &sys_reset  &trans   &trans   &trans         &kp N0    &kp N1  &kp N2        &kp N3                &kp SLASH              &kp ENTER
+                                  &trans   &trans   &none          &trans    &trans
+                                           &trans   &screenshot    &trans
             >;
         };
 
