@@ -8,7 +8,26 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       revision: v4.1.0+zmk-fixes
-      import: app/west.yml
+      clone-depth: 1
+      import:
+        name-blocklist:
+          - ci-tools
+          - hal_altera
+          - hal_cypress
+          - hal_infineon
+          - hal_microchip
+          - hal_nxp
+          - hal_openisa
+          - hal_xtensa
+          - hal_st
+          - hal_ti
+          - loramac-node
+          - mcuboot
+          - mcumgr
+          - net-tools
+          - openthread
+          - edtt
+          - trusted-firmware-m
     - name: zmk-pmw610-driver
       remote: badjeff
       revision: main
