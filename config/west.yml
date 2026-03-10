@@ -11,7 +11,7 @@ manifest:
       import: app/west.yml
     - name: zmk-pmw610-driver
       remote: badjeff
-      revision: main
+      revision: zmk-0.3
 
   self:
     path: config
